@@ -1,7 +1,7 @@
 {
-  "name": "codex-fullstack-delivery",
+  "name": "codex-plugins",
   "interface": {
-    "displayName": "Codex Fullstack Delivery"
+    "displayName": "Codex Plugins"
   },
   "plugins": [
     {

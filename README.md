@@ -1,31 +1,30 @@
-# codex-fullstack-delivery
+# codex-plugins
 
-This repository publishes the `codex-fullstack-delivery` plugin for Codex.
+This repository is a Codex plugin marketplace for team-maintained plugins.
+
+## Marketplace
+
+- Marketplace name: `codex-plugins`
+- Marketplace display name: `Codex Plugins`
+- Plugin entries are declared in `.agents/plugins/marketplace.json`.
+- Plugin packages live under `plugins/<plugin-name>/`.
 
 ## Plugins
 
 - `codex-fullstack-delivery`: full-stack delivery workflow that coordinates frontend, backend, and test agents. Backend work must follow the bundled DDD pipeline.
 
-## Included Skills
-
-- `fullstack-agent-team`: coordinates frontend, backend, and test agents for contract-first full-stack delivery.
-- `source-command-ddd`: end-to-end DDD pipeline from requirement to strategic design, tactical design, code generation, compile, test, and review.
-- `source-command-ddd-strategic`: standalone DDD strategic design.
-- `source-command-ddd-tactical`: standalone DDD tactical design and design contract generation.
-- `source-command-ddd-codegen`: standalone DDD code generation from a JSON design contract.
-
-## Install
+## Install The Marketplace
 
 Team members can add this repository as a Codex plugin marketplace:
 
 ```bash
-codex plugin marketplace add maxgao-power/codex-fullstack-delivery --ref main
+codex plugin marketplace add maxgao-power/codex-plugins --ref main
 ```
 
 For SSH/private repositories:
 
 ```bash
-codex plugin marketplace add git@github.com:maxgao-power/codex-fullstack-delivery.git --ref main
+codex plugin marketplace add git@github.com:maxgao-power/codex-plugins.git --ref main
 ```
 
 Then open the plugin directory:
@@ -35,17 +34,55 @@ codex
 /plugins
 ```
 
-Select `Codex Fullstack Delivery`, then install `Codex Fullstack Delivery`.
+Select `Codex Plugins`, then install the plugin you need.
 
-## Usage
+## Install The Current Plugin
 
-Start a new thread and ask Codex to use the plugin:
+```bash
+codex plugin add codex-fullstack-delivery@codex-plugins
+```
+
+## Update Local Marketplace Snapshot
+
+When this repository changes, team members can refresh their local marketplace snapshot and reinstall the plugin:
+
+```bash
+codex plugin marketplace upgrade codex-plugins
+codex plugin add codex-fullstack-delivery@codex-plugins
+```
+
+Start a new Codex thread after reinstalling so updated skills and tools are loaded.
+
+
+## Migration From The Old Marketplace Name
+
+If you previously added this repository when it was named `codex-fullstack-delivery`, remove the old marketplace entry and add the new one:
+
+```bash
+codex plugin marketplace remove codex-fullstack-delivery
+codex plugin marketplace add maxgao-power/codex-plugins --ref main
+codex plugin add codex-fullstack-delivery@codex-plugins
+```
+
+Start a new Codex thread after reinstalling.
+
+## Use The Current Plugin
 
 ```text
 @codex-fullstack-delivery 使用 fullstack-agent-team 开发这个全栈功能，后端遵循 DDD 流水线。
 ```
 
-## Backend Project Requirements
+## Add A New Plugin
+
+1. Create `plugins/<new-plugin-name>/.codex-plugin/plugin.json`.
+2. Put bundled skills under `plugins/<new-plugin-name>/skills/`.
+3. Add a new entry to `.agents/plugins/marketplace.json`.
+4. Validate the plugin.
+5. Commit and push.
+
+See `docs/ADDING_PLUGIN.md` for the detailed checklist.
+
+## Backend Project Requirements For `codex-fullstack-delivery`
 
 The DDD pipeline expects the target backend project to provide the required project infrastructure, such as:
 
@@ -57,3 +94,5 @@ The DDD pipeline expects the target backend project to provide the required proj
 - Optional `.Codex/knowledge` entries for historical pipeline lessons.
 
 If a backend project does not provide the required infrastructure, the backend agent must report the missing prerequisites instead of bypassing the DDD pipeline.
+
+
