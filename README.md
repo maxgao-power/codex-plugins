@@ -11,7 +11,7 @@ This repository is a Codex plugin marketplace for team-maintained plugins.
 
 ## Plugins
 
-- `codex-fullstack-delivery`: full-stack delivery workflow that coordinates frontend, backend, and test agents. Backend work must follow the bundled DDD pipeline.
+- `codex-fullstack-delivery`: contract-first full-stack delivery workflow that coordinates frontend, backend, and test agents.
 
 ## Install The Marketplace
 
@@ -69,7 +69,7 @@ Start a new Codex thread after reinstalling.
 ## Use The Current Plugin
 
 ```text
-@codex-fullstack-delivery 使用 fullstack-agent-team 开发这个全栈功能，后端遵循 DDD 流水线。
+@codex-fullstack-delivery 使用 fullstack-agent-team 开发这个全栈功能，协调后端、前端和测试 Agent 完成契约优先交付。
 ```
 
 ## Add A New Plugin
@@ -81,18 +81,5 @@ Start a new Codex thread after reinstalling.
 5. Commit and push.
 
 See `docs/ADDING_PLUGIN.md` for the detailed checklist.
-
-## Backend Project Requirements For `codex-fullstack-delivery`
-
-The DDD pipeline expects the target backend project to provide the required project infrastructure, such as:
-
-- Gradle wrapper or compatible Gradle commands.
-- DDD code generation task, for example `:tools:codegen:run`.
-- Contract documents under `docs/`.
-- Project package and naming conventions.
-- Test framework and compile/test commands.
-- Optional `.Codex/knowledge` entries for historical pipeline lessons.
-
-If a backend project does not provide the required infrastructure, the backend agent must report the missing prerequisites instead of bypassing the DDD pipeline.
 
 

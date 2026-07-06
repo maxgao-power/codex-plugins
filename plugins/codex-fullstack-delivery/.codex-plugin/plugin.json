@@ -1,22 +1,22 @@
 {
   "name": "codex-fullstack-delivery",
-  "version": "0.1.0",
-  "description": "Full-stack delivery workflow with a DDD backend pipeline.",
+  "version": "0.2.0",
+  "description": "Contract-first full-stack delivery workflow for frontend, backend, and test agents.",
   "author": {
     "name": "WHLG Team"
   },
   "repository": "https://github.com/maxgao-power/codex-plugins",
   "keywords": [
     "fullstack",
-    "ddd",
+    "contract-first",
     "codex",
     "agent-team"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Codex Fullstack Delivery",
-    "shortDescription": "Full-stack agent team with DDD backend workflow.",
-    "longDescription": "Coordinates frontend, backend, and test agents for contract-first full-stack delivery. Backend work follows the bundled DDD strategic design, tactical design, code generation, review, compile, and test pipeline.",
+    "shortDescription": "Full-stack agent team for contract-first delivery.",
+    "longDescription": "Coordinates frontend, backend, and test agents for contract-first full-stack delivery, API documentation, frontend/backend integration, automated smoke checks, and browser E2E verification.",
     "developerName": "WHLG Team",
     "category": "Productivity",
     "capabilities": [
@@ -26,7 +26,7 @@
     ],
     "defaultPrompt": [
       "Use fullstack-agent-team for this feature.",
-      "Run the backend through the DDD pipeline."
+      "Coordinate backend, frontend, and test agents."
     ],
     "brandColor": "#2563EB"
   }
