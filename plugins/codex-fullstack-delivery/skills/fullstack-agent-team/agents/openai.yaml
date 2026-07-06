@@ -1,0 +1,5 @@
+interface:
+  display_name: "全栈 Agent 团队"
+  short_description: "并行或跨线程协调前后端与测试 Agent，契约优先并自动化验收"
+  default_prompt: "使用 $fullstack-agent-team 以独立前端、后端和测试 Agent 并行完成这个全栈功能的接口契约、开发对接、自动化测试、浏览器 E2E 和集成验证；如果 Codex 桌面版当前线程无法同时审查前后端项目，则采用跨线程协作模式，当前线程只做技术负责人，前后端实现必须先遵循各自项目 AGENTS.md，并尽量减少主上下文占用。"
+
