@@ -1,4 +1,4 @@
 interface:
   display_name: "全栈 Agent 团队"
-  short_description: "协调前端、后端与测试 Agent，契约优先并自动化验收"
-  default_prompt: "使用 $fullstack-agent-team 以独立前端、后端和测试 Agent 并行完成这个全栈功能的接口契约、开发对接、自动化测试、浏览器 E2E 和集成验证；前后端实现必须先遵循各自项目 AGENTS.md，并尽量减少主上下文占用。"
+  short_description: "协调全栈交付；后端新功能先走 DDD 编排"
+  default_prompt: "使用 $fullstack-agent-team 以独立前端、后端和测试 Agent 并行完成这个全栈功能；后端开发新业务功能时先使用 ddd 编排战略设计、战术建模和代码实现，再交付接口文档给前端对接，并完成自动化测试、浏览器 E2E 和集成验证。"

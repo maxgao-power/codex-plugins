@@ -1,0 +1,4 @@
+interface:
+  display_name: "DDD代码实现"
+  short_description: "按目标项目技术栈落地DDD代码、测试、适配器与架构门禁"
+  default_prompt: "使用 $ddd-implementation 根据当前项目代码和 DDD 战术设计实现一个可测试的业务切片。"

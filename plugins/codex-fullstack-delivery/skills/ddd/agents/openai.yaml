@@ -1,0 +1,4 @@
+interface:
+  display_name: "DDD流水线"
+  short_description: "编排DDD战略设计、战术设计与通用实现三阶段流水线"
+  default_prompt: "使用 $ddd 从业务需求开始编排战略设计、战术设计和代码实现。"

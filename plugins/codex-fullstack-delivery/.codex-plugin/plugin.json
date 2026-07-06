@@ -1,7 +1,7 @@
 {
   "name": "codex-fullstack-delivery",
-  "version": "0.2.0",
-  "description": "Contract-first full-stack delivery workflow for frontend, backend, and test agents.",
+  "version": "0.3.0",
+  "description": "Contract-first full-stack delivery workflow with DDD-guided backend feature development.",
   "author": {
     "name": "WHLG Team"
   },
@@ -9,14 +9,15 @@
   "keywords": [
     "fullstack",
     "contract-first",
+    "ddd",
     "codex",
     "agent-team"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Codex Fullstack Delivery",
-    "shortDescription": "Full-stack agent team for contract-first delivery.",
-    "longDescription": "Coordinates frontend, backend, and test agents for contract-first full-stack delivery, API documentation, frontend/backend integration, automated smoke checks, and browser E2E verification.",
+    "shortDescription": "Full-stack agent team with DDD-guided backend delivery.",
+    "longDescription": "Coordinates frontend, backend, and test agents for contract-first full-stack delivery. Backend agents use the bundled DDD workflow for new business features before producing API documentation, frontend/backend integration, automated smoke checks, and browser E2E verification.",
     "developerName": "WHLG Team",
     "category": "Productivity",
     "capabilities": [
@@ -26,7 +27,8 @@
     ],
     "defaultPrompt": [
       "Use fullstack-agent-team for this feature.",
-      "Coordinate backend, frontend, and test agents."
+      "Coordinate backend, frontend, and test agents.",
+      "Use the DDD workflow for backend new business feature development."
     ],
     "brandColor": "#2563EB"
   }
