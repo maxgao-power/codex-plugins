@@ -85,7 +85,7 @@ python C:\Users\Administrator\.codex\skills\.system\skill-creator\scripts\quick_
 
 Commit and push:
 
-```bash
+```powershell
 git add .
 git commit -m "Add <plugin-name> plugin"
 git push origin main
@@ -93,7 +93,7 @@ git push origin main
 
 Team members then refresh the marketplace snapshot:
 
-```bash
+```powershell
 codex plugin marketplace upgrade codex-plugins
 codex plugin add <plugin-name>@codex-plugins
 ```
