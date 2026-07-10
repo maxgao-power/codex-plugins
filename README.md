@@ -17,13 +17,13 @@ This repository is a Codex plugin marketplace for team-maintained plugins.
 
 Team members can add this repository as a Codex plugin marketplace:
 
-```bash
+```powershell
 codex plugin marketplace add maxgao-power/codex-plugins --ref main
 ```
 
 For SSH/private repositories:
 
-```bash
+```powershell
 codex plugin marketplace add git@github.com:maxgao-power/codex-plugins.git --ref main
 ```
 
@@ -38,7 +38,7 @@ Select `Codex Plugins`, then install the plugin you need.
 
 ## Install The Current Plugin
 
-```bash
+```powershell
 codex plugin add codex-fullstack-delivery@codex-plugins
 ```
 
@@ -46,7 +46,7 @@ codex plugin add codex-fullstack-delivery@codex-plugins
 
 When this repository changes, team members can refresh their local marketplace snapshot and reinstall the plugin:
 
-```bash
+```powershell
 codex plugin marketplace upgrade codex-plugins
 codex plugin add codex-fullstack-delivery@codex-plugins
 ```
@@ -58,7 +58,7 @@ Start a new Codex thread after reinstalling so updated skills and tools are load
 
 If you previously added this repository when it was named `codex-fullstack-delivery`, remove the old marketplace entry and add the new one:
 
-```bash
+```powershell
 codex plugin marketplace remove codex-fullstack-delivery
 codex plugin marketplace add maxgao-power/codex-plugins --ref main
 codex plugin add codex-fullstack-delivery@codex-plugins

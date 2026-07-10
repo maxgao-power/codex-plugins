@@ -1,6 +1,6 @@
 {
   "name": "codex-fullstack-delivery",
-  "version": "0.3.5",
+  "version": "0.3.8",
   "description": "Contract-first full-stack delivery workflow with concise skill rules, role-scoped references, and DDD-guided backend feature development.",
   "author": {
     "name": "WHLG Team"
