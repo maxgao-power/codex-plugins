@@ -12,6 +12,7 @@ This repository is a Codex plugin marketplace for team-maintained plugins.
 ## Plugins
 
 - `codex-fullstack-delivery`: contract-first full-stack delivery workflow that coordinates frontend, backend, and test agents.
+- `usage-assistant`: AI 用量助手，提供本地悬浮窗和用量中心，帮助用户查看每轮输入 token、输出 token、平均输入和上下文占比。
 
 ## Install The Marketplace
 
@@ -36,19 +37,21 @@ codex
 
 Select `Codex Plugins`, then install the plugin you need.
 
-## Install The Current Plugin
+## Install Plugins
 
 ```powershell
 codex plugin add codex-fullstack-delivery@codex-plugins
+codex plugin add usage-assistant@codex-plugins
 ```
 
 ## Update Local Marketplace Snapshot
 
-When this repository changes, team members can refresh their local marketplace snapshot and reinstall the plugin:
+When this repository changes, team members can refresh their local marketplace snapshot and reinstall the plugins they use:
 
 ```powershell
 codex plugin marketplace upgrade codex-plugins
 codex plugin add codex-fullstack-delivery@codex-plugins
+codex plugin add usage-assistant@codex-plugins
 ```
 
 Start a new Codex thread after reinstalling so updated skills and tools are loaded.
@@ -66,10 +69,12 @@ codex plugin add codex-fullstack-delivery@codex-plugins
 
 Start a new Codex thread after reinstalling.
 
-## Use The Current Plugin
+## Use Plugins
 
 ```text
 @codex-fullstack-delivery 使用 fullstack-agent-team 开发这个全栈功能，协调后端、前端和测试 Agent 完成契约优先交付。
+@usage-assistant 打开用量悬浮窗
+@usage-assistant 查看当前对话用量
 ```
 
 ## Add A New Plugin
