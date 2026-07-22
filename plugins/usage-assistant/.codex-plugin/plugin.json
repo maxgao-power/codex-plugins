@@ -1,0 +1,26 @@
+{
+  "name": "usage-assistant",
+  "version": "0.1.0+codex.20260722051535",
+  "description": "Open a simple local assistant for AI token and context usage.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI 用量助手",
+    "shortDescription": "打开一个简洁的用量悬浮窗，查看每轮输入、输出和上下文占比。",
+    "longDescription": "AI 用量助手提供一个本地悬浮窗和用量中心，帮助普通用户查看当前 Codex 会话的输入 token、输出 token、平均输入和上下文占比。核心统计工具随插件一起安装，不依赖开发机上的固定目录。",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "打开用量悬浮窗。",
+      "查看当前对话用量。",
+      "打开用量中心。"
+    ]
+  }
+}

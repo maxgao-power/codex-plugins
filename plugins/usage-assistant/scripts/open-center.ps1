@@ -1,12 +1,13 @@
 . "$PSScriptRoot\_common.ps1"
 
 $dashboardDir = Get-DashboardDir
-$center = Join-Path $dashboardDir "usage\usage-center.html"
+$usageDir = Get-UsageDataDir
+$center = Join-Path $usageDir "usage-center.html"
 
 if (-not (Test-Path -LiteralPath $center)) {
   $node = Get-NodeExe
   $collector = Join-Path $dashboardDir "collector.mjs"
-  Start-Process -FilePath $node -ArgumentList @($collector, "scan", "--quiet") -Wait -WindowStyle Hidden
+  & $node $collector "scan" "--quiet" "--out" $usageDir
 }
 
 if (-not (Test-Path -LiteralPath $center)) {
@@ -14,4 +15,4 @@ if (-not (Test-Path -LiteralPath $center)) {
 }
 
 Start-Process -FilePath $center
-Write-Output "Codex usage center opened."
+Write-Output "AI usage center opened."

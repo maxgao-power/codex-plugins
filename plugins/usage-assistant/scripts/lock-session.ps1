@@ -6,9 +6,10 @@ param(
 . "$PSScriptRoot\_common.ps1"
 
 $dashboardDir = Get-DashboardDir
+$usageDir = Get-UsageDataDir
 $node = Get-NodeExe
 $collector = Join-Path $dashboardDir "collector.mjs"
 
-Start-Process -FilePath $node -ArgumentList @($collector, "lock", "--session", $SessionId, "--quiet") -Wait -WindowStyle Hidden
+& $node $collector "lock" "--session" $SessionId "--quiet" "--out" $usageDir
 
-Write-Output "Codex usage monitor locked to session: $SessionId"
+Write-Output "AI usage assistant locked to session: $SessionId"

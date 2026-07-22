@@ -1,0 +1,15 @@
+{
+  "name": "usage-assistant-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "parse": "node server.mjs parse",
+    "usage": "node collector.mjs latest",
+    "usage:json": "node collector.mjs latest --json",
+    "usage:scan": "node collector.mjs scan",
+    "usage:user": "node collector.mjs scan --quiet",
+    "usage:notify": "node notify-wrapper.mjs turn-ended"
+  }
+}

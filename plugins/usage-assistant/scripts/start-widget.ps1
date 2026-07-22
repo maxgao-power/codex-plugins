@@ -1,6 +1,7 @@
 . "$PSScriptRoot\_common.ps1"
 
 $dashboardDir = Get-DashboardDir
+$usageDir = Get-UsageDataDir
 $powershell = Get-PowerShellExe
 $widget = Join-Path $dashboardDir "codex-usage-widget.ps1"
 
@@ -15,7 +16,9 @@ Start-Process -FilePath $powershell -ArgumentList @(
   "-WindowStyle",
   "Hidden",
   "-File",
-  $widget
+  "`"$widget`"",
+  "-UsageDir",
+  "`"$usageDir`""
 ) -WindowStyle Hidden
 
-Write-Output "Codex usage floating widget started."
+Write-Output "AI usage assistant floating widget started."

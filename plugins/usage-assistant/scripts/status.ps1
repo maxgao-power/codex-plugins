@@ -1,11 +1,12 @@
 . "$PSScriptRoot\_common.ps1"
 
 $dashboardDir = Get-DashboardDir
+$usageDir = Get-UsageDataDir
 $node = Get-NodeExe
 $collector = Join-Path $dashboardDir "collector.mjs"
-$summary = Join-Path $dashboardDir "usage\latest-user-summary.json"
+$summary = Join-Path $usageDir "latest-user-summary.json"
 
-Start-Process -FilePath $node -ArgumentList @($collector, "scan", "--quiet") -Wait -WindowStyle Hidden
+& $node $collector "scan" "--quiet" "--out" $usageDir
 
 if (-not (Test-Path -LiteralPath $summary)) {
   throw "Usage summary was not found: $summary"

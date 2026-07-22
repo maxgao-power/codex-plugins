@@ -17,10 +17,10 @@
       "category": "Productivity"
     },
     {
-      "name": "codex-usage-monitor",
+      "name": "usage-assistant",
       "source": {
         "source": "local",
-        "path": "./plugins/codex-usage-monitor"
+        "path": "./plugins/usage-assistant"
       },
       "policy": {
         "installation": "AVAILABLE",

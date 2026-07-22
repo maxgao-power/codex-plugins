@@ -1,10 +1,10 @@
 . "$PSScriptRoot\_common.ps1"
 
-$dashboardDir = Get-DashboardDir
-$pidFile = Join-Path $dashboardDir "usage\widget.pid"
+$usageDir = Get-UsageDataDir
+$pidFile = Join-Path $usageDir "widget.pid"
 
 if (-not (Test-Path -LiteralPath $pidFile)) {
-  Write-Output "Codex usage floating widget is not running."
+  Write-Output "AI usage assistant floating widget is not running."
   return
 }
 
@@ -14,4 +14,4 @@ if ($pidText -match "^\d+$") {
 }
 
 Remove-Item -LiteralPath $pidFile -Force -ErrorAction SilentlyContinue
-Write-Output "Codex usage floating widget stopped."
+Write-Output "AI usage assistant floating widget stopped."
