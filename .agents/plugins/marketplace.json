@@ -15,18 +15,6 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
-    },
-    {
-      "name": "usage-assistant",
-      "source": {
-        "source": "local",
-        "path": "./plugins/usage-assistant"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
     }
   ]
 }
